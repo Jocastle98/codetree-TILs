@@ -7,6 +7,6 @@ int main() {
 
     cin>>temp>>xxxx>>yyyy;
 
-    cout<<"010"<<yyyy<<"-"<<xxxx;
+    cout<<"010"<<yyyy<<xxxx;
     return 0;
 }

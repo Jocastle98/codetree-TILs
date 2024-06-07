@@ -5,7 +5,7 @@ int main() {
     int a;
     cin>>a;
 
-    if(a%3 or a%5){
+    if(a%3==0 or a%5==0){
         cout<<1;
     }
     else{

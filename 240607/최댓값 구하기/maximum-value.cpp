@@ -4,10 +4,10 @@ int main() {
     // 여기에 코드를 작성해주세요.
     int a,b,c;
     cin>>a>>b>>c;
-    if(a>b and a>c){
+    if(a>=b and a>=c){
         cout<<a;
     }
-    else if(b>a and b>c){
+    else if(b>=a and b>=c){
         cout<<b;
     }
     else{

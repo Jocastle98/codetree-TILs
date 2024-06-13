@@ -8,8 +8,8 @@ int main() {
 
     for(int i=1; i<=10; i++){
         n /=i;
-        if((n/i)<=1){
-            cout<<i+1;
+        if((n)<=1){
+            cout<<i;
             break;
         }
         

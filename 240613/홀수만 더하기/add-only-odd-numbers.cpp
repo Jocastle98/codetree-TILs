@@ -8,7 +8,7 @@ int main() {
     int sum=0;
     for(int i=1; i<=n; i++){
         cin>>a;
-        if((i%2==1) and (i%3==0)){
+        if((a%2==1) and (a%3==0)){
             sum +=a;
         }
     }

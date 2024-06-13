@@ -6,7 +6,7 @@ int main() {
     int sum1=0,sum2=0,sum3=0;
     cin>>n;
 
-    for(int i=1; i<n; i++ ){
+    for(int i=1; i<=n; i++ ){
         if((i%2==0) and (i%6 !=0)){
             sum1++;
         }

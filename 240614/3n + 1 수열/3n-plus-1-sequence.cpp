@@ -6,11 +6,11 @@ int main() {
     cin>>N;
     int sum =0;
     while(1){
-        if(N%2==0){
+        if(N%2==0 ){
             N /=2;
             sum++;
         }
-        else if(N%2==1){
+        else if(N%2==1 and N !=1){
             N = N*3+1;
             sum++;
         }

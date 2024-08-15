@@ -19,7 +19,7 @@ int main() {
             break;
         }
         cnt[arr[i]%b]++;
-        cout<<arr[i]<<endl;
+      
         
     }
     for(int i=0; i<k; i++){

@@ -9,6 +9,9 @@ int main() {
     for(int i=0; i<n; i++) {
         cin>>arr[i];
         arr[i] *=arr[i];
+        
+    }
+    for(int i=0; i<n; i++){
         cout<<arr[i]<<" ";
     }
     

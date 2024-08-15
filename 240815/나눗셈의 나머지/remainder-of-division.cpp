@@ -7,7 +7,7 @@ int main() {
     cin>>a>>b;
     int arr[1000];
     arr[0]=a;
-    int cnt[10]={};
+    int cnt[11]={};
     int sum=0;
 
     for(int i=0; i<1000; i++){
@@ -19,6 +19,7 @@ int main() {
             break;
         }
         cnt[arr[i]%b]++;
+    
         
     }
     for(int i=0; i<k; i++){

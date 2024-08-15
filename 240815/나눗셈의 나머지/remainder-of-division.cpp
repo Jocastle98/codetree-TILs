@@ -14,12 +14,12 @@ int main() {
        
         arr[i+1]= arr[i]/b;
         
-        if(arr[i]<1){
+        if(arr[i]<=1){
             k=i;
             break;
         }
         cnt[arr[i]%b]++;
-    
+        cout<<arr[i]<<endl;
         
     }
     for(int i=0; i<k; i++){

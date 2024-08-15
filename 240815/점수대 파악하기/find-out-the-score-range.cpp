@@ -18,7 +18,7 @@ int main() {
         
     }
    
-    for(int i=10; i>1; i--){
+    for(int i=10; i>=1; i--){
         cout<<i*10<<" - "<<cnt[i]<<endl;
     }
     return 0;

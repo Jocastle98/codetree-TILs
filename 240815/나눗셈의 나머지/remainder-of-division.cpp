@@ -21,7 +21,7 @@ int main() {
         cnt[arr[i]%b]++;
         
     }
-    for(int i=0; i<10; i++){
+    for(int i=0; i<k; i++){
         sum += cnt[i]*cnt[i];
     }
     cout<<sum;

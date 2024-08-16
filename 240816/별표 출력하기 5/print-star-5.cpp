@@ -8,10 +8,11 @@ int main() {
 
     for(int i=n; i>0; i--){
         for(int j=i; j>0; j--){
-            cout<<" ";
+            
             for(int k=i; k>0; k--){
                 cout<<"*";
             }
+            cout<<" ";
         }
         cout<<endl;
     }

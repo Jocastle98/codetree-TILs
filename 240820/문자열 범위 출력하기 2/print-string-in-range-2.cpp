@@ -8,9 +8,19 @@ int main() {
     int n;
     cin>>arr;
     cin>>n;
-
-    for(int i=arr.length()-1; i>=arr.length()-n; i--){
-        cout<<arr[i];
+    int len = arr.length();
+    if(n>len){
+        for(int i=len-1; i>=0; i--){
+            cout<<arr[i];
+        }
     }
-    return 0;
+
+    else{
+        for(int i=len-1; i>=len-n; i--){
+            cout<<arr[i];
+        }
+    }
+    
+
+   return 0;
 }

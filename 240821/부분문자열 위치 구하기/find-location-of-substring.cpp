@@ -8,14 +8,8 @@ int main() {
     cin>>str>>a;
 
     int k=-1;
-    for(int i=0; i<str.length()-1; i++){
-        for(int j=0; j<a.length(); j++){
-            if(str[i]==a[j] and str[i+1]==a[j+1]){
-                k=i;
-                break;
-            }
-
-        }
+    if(str.find(a) != string::npos){
+        k= str.find(a);
     }
     cout<<k;
 

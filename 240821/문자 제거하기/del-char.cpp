@@ -14,7 +14,7 @@ int main() {
         if(n>=str.length()){
             str.erase(str.length()-1,1);
             
-            break;
+            
         }
         else{
             str.erase(n,1);
@@ -22,6 +22,6 @@ int main() {
         }
         cout<<str<<endl;
     }
-    cout<<str;
+    
     return 0;
 }

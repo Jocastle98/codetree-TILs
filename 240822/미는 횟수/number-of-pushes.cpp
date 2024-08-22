@@ -27,7 +27,7 @@ int main() {
         cout<<-1;
     }
     else{
-        cout<<n;
+        cout<<n+1;
     }
     return 0;
 }

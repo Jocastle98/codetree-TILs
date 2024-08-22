@@ -14,7 +14,7 @@ int main() {
     }
     string str = to_string(sum);
 
-    str = str.substr(1,str.length()) + str.substr(0,1);
+    str = str.substr(1,str.length()-1) + str.substr(0,1);
     if(str[0]=='0'){
         cout<<0<<stoi(str);
     }

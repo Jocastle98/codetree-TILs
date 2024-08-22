@@ -6,7 +6,7 @@ int main() {
     // 여기에 코드를 작성해주세요.
     string a,b;
     cin>>a>>b;
-    int n=0;
+    int n=1;
     int len = a.length();
     
     for(int i=1; i<=len; i++){
@@ -27,7 +27,7 @@ int main() {
         cout<<-1;
     }
     else{
-        cout<<n+1;
+        cout<<n;
     }
     return 0;
 }

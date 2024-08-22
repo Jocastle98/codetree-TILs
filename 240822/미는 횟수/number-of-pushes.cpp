@@ -6,16 +6,28 @@ int main() {
     // 여기에 코드를 작성해주세요.
     string a,b;
     cin>>a>>b;
-    int n=-1;
+    int n=0;
     int len = a.length();
-    for(int i=0; i<len; i++){
-        a = a.substr(len-1,1)+a.substr(1,len-1);
+    
+    for(int i=1; i<=len; i++){
+        char last = a[len-1];
+
+        a = last + a.substr(0,len-1);
         if(a==b){
             
             break;    
         }
-        n++;
+        else{
+            n++;
+//cout<<a<<endl;
+        }
+        
     }
-    cout<<n-2;
+    if(n==len){
+        cout<<-1;
+    }
+    else{
+        cout<<n+1;
+    }
     return 0;
 }

@@ -13,7 +13,7 @@ int main() {
             }
         }
         else{
-            for(int j=b; j<=a; j++){
+            for(int j=b; j>=a; j--){
             cout<<j<<" * "<<i<<" = "<<j*i<<"  ";
             }
         }

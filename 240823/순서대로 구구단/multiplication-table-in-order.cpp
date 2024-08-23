@@ -7,7 +7,10 @@ int main() {
     cin>>a>>b;
 
     for(int i=1; i<=9; i++){
-        cout<<a<<" * "<<i<<" = "<<a*i<<"  "<<b<<" * "<<i<<" = "<<i*b<<endl;
+        for(int j=a; j<=b; j++){
+            cout<<j<<" * "<<i<<" = "<<j*i<<"  ";
+        }
+        cout<<endl;
     }
     return 0;
 }

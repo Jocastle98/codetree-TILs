@@ -10,6 +10,9 @@ int main() {
         for(int j=0; j<=i; j++){
             cout<<a;
             a++;
+            if(a>'Z'){
+                a='A';
+            }
         }
         cout<<endl;
     }

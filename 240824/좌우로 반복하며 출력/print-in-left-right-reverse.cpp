@@ -12,7 +12,7 @@ int main() {
                 cout<<j+1;
             }
             else{
-                cout<<4-j;
+                cout<<n-j;
             }
         }
         cout<<endl;   

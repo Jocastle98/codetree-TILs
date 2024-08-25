@@ -12,11 +12,15 @@ int main() {
         for(int j=1; j<=i; j++){
             if(i%j==0){
                 cnt++;
+                if(cnt==3){
+                    k++;
+                }
             }
-            if(cnt==3){
-            k++;
-             }
+            
         }
+        // if(cnt==3){
+        //     k++;
+        //     }
         
     }
     cout<<k;

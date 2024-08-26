@@ -4,7 +4,7 @@ using namespace std;
 
 void va(int n,int m){
     int k;
-    for(int i=1; i<=max(n,m); i++){
+    for(int i=1; i<=min(n,m); i++){
         if(n*i%m==0){
             k=i*n;
             break;

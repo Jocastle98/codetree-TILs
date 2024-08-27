@@ -10,7 +10,7 @@ int main() {
     int n;
     cin>>n;
 
-    if(num(n)%5==0){
+    if(num(n)%5==0 and n%2==0){
         cout<<"Yes";
     }
     else{

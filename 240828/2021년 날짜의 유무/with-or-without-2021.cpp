@@ -13,7 +13,7 @@ bool year(int m, int d){
             return false;
         }
     }
-    if(m<8){
+    if(m<8 and m!=2){
         if(m%2==1 and d<=31){
             return true;
         }
@@ -23,6 +23,12 @@ bool year(int m, int d){
         else{
             return false;
         }
+    }
+    if(m==2 and d<=28){
+        return true;
+    }
+    else{
+        return false;
     }
     return false;
 }

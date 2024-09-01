@@ -12,6 +12,7 @@ void ind(string &str){
         }
         else{
             cout<<-1;
+            break;
         }
     }
 }

@@ -3,16 +3,19 @@
 using namespace std;
 
 bool othe(string &s){
-    
+    int cnt =0;
     char a = s[0];
     for(int i=1; i<=s.length()-1; i++){
         if(a !=s[i]){
-            return true;
+            cnt++;
         }
-        else{
-            return false;
-        }
-
+       
+    }
+    if(cnt>0){
+        return true;
+    }
+    else{
+        return false;
     }
 }
 

@@ -3,9 +3,9 @@
 using namespace std;
 #define max 100
 int arr[max];
-int a=arr[0];
+
 int fuc(int n){
-    int max1 =a;
+    int max1 =arr[0];
     for(int i=1; i<n; i++){
         
         if(arr[i]>max1) max1=arr[i];

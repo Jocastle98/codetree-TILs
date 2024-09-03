@@ -17,7 +17,7 @@ int main() {
     // }
     for(int i=0; i<2*n; i++){
         if(arr[i]+arr[2*n-i-1]>max){
-            max = arr[i]+arr[2*n-i];
+            max = arr[i]+arr[2*n-i-1];
         }
     }
     cout<<max;

@@ -24,11 +24,12 @@ int main() {
     //     cout<<str[i]<<" ";
     // }
     
-    sort(str,str+cnt);
+    
 
-    // for(int i=0; i<=cnt; i++){
-    //     cout<<str[i]<<" ";
-    // }
+    for(int i=0; i<=cnt; i++){
+        sort(str,str+cnt+1);
+        //cout<<str[i]<<" ";
+    }
     cout<<str[k];
 
 

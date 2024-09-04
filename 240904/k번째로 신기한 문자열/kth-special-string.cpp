@@ -4,34 +4,30 @@
 using namespace std;
 
 int main() {
-    // 여기에 코드를 작성해주세요.
-    int n,k;
+    int n, k;
     string t;
-    cin>>n>>k>>t;
+    
+    // 입력 받기
+    cin >> n >> k >> t;
+    
     string arr[n];
-    string str[n];
-    int cnt=0;
-    for(int i=0; i<n; i++){
-        cin>>arr[i];
-        if(arr[i].find(t) !=string::npos){
-            cnt++;
-            str[i] +=arr[i];
-            // cout<<str[i]<<endl;
-            // cout<<cnt<<" ";
+    string str[n]; 
+    int cnt = 0;
+    
+    
+    for (int i = 0; i < n; i++) {
+        cin >> arr[i];
+        
+        if (arr[i].substr(0, t.size()) == t) {
+            str[cnt++] = arr[i];
         }
     }
-    // for(int i=0; i<cnt; i++){
-    //     cout<<str[i]<<" ";
-    // }
     
     
-
-    for(int i=0; i<=cnt; i++){
-        sort(str,str+cnt+1);
-        //cout<<str[i]<<" ";
-    }
-    cout<<str[k];
-
+    sort(str, str + cnt);
+    
+    
+    cout << str[k-1] << endl;
 
     return 0;
 }

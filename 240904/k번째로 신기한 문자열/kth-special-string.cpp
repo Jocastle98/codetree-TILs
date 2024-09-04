@@ -24,7 +24,7 @@ int main() {
     //     cout<<str[i]<<" ";
     // }
     
-    sort(str,str+cnt+1);
+    sort(str,str+cnt);
 
     // for(int i=0; i<=cnt; i++){
     //     cout<<str[i]<<" ";

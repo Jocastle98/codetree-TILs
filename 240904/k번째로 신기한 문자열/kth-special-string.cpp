@@ -16,11 +16,19 @@ int main() {
         if(arr[i].find(t) !=string::npos){
             cnt++;
             str[i] +=arr[i];
+            // cout<<str[i]<<endl;
+            // cout<<cnt<<" ";
         }
     }
+    // for(int i=0; i<cnt; i++){
+    //     cout<<str[i]<<" ";
+    // }
     
-    sort(str,str+cnt);
+    sort(str,str+cnt+1);
 
+    // for(int i=0; i<=cnt; i++){
+    //     cout<<str[i]<<" ";
+    // }
     cout<<str[k-1];
 
 

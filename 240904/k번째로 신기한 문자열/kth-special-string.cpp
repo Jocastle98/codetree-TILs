@@ -29,7 +29,7 @@ int main() {
     // for(int i=0; i<=cnt; i++){
     //     cout<<str[i]<<" ";
     // }
-    cout<<str[k-1];
+    cout<<str[k];
 
 
     return 0;

@@ -12,10 +12,10 @@ class ap{
         }
 };
 bool cmp(ap a, ap b){
-    if(a.x*a.x+a.y*a.y==b.x*b.x+b.y*b.y){
+    if(abs(a.x)+abs(a.y)==abs(b.x)+abs(b.y)){
         return a.n<b.n;
     }
-    return a.x*a.x+a.y*a.y<b.x*b.x+b.y*b.y;
+    return abs(a.x)+abs(a.y)<abs(b.x)+abs(b.y);
 }
 
 int main() {

@@ -24,7 +24,8 @@ bool cmp1(Student a, Student b){
 
 int main() {
     // 여기에 코드를 작성해주세요.
-    
+    cout<<fixed;
+    cout.precision(1);
     Student stu[5];
     for(int i=0; i<5; i++){
         string a;

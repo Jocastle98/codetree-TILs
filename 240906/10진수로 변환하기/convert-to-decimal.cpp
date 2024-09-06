@@ -12,6 +12,10 @@ int main() {
         n /=10;
         cnt++;
     }
-    cout<<num+cnt;
+    if(cnt==1){
+    cout<<num;}
+    else{
+        cout<<num+cnt;
+    }
     return 0;
 }

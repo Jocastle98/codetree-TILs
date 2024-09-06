@@ -8,7 +8,8 @@ int main() {
     int d=11, e=11, f=11;
     int time=0;
     if(a<11 or (a==11 and b<11) or (a==11 and b==11 and c<11)){
-        time =-1;
+        cout<<-1;
+        return 0;
             
     }
     while(!(d==a and e==b and f==c)){

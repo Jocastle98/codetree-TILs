@@ -20,7 +20,7 @@ int main() {
         }
 
         else{
-            for(int k=cur; k<cur+x; k++){
+            for(int k=cur+1; k<cur+x; k++){
                 arr[k]++;
             }
             cur +=x;

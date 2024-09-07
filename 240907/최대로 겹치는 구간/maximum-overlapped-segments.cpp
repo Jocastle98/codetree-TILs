@@ -1,35 +1,41 @@
 #include <iostream>
+
+#define MAX_N 100
+#define MAX_R 200
+#define OFFSET 100
+
 using namespace std;
 
+int n;
+int x1[MAX_N], x2[MAX_N];
+
+int checked[MAX_R + 1];
+
 int main() {
-    int n;
+    // 입력
     cin >> n;
-    const int OFFSET = 100;  // 음수 좌표를 양수로 변환하기 위한 오프셋
-    int arr[201] = {0};      // -100에서 100까지의 좌표를 표현하기 위한 배열
-
-    // n개의 선분 입력
-    for (int i = 0; i < n; i++) {
-        int a, b;
-        cin >> a >> b;
-
-        arr[a + OFFSET]++;     // 시작점에서 +1
-        arr[b - 1 + OFFSET]--; // 끝점에서 닿지 않도록 b-1에서 처리
+    
+    for(int i = 0; i < n; i++) {
+        cin >> x1[i] >> x2[i];
+        
+        // OFFSET을 더해줍니다.
+        x1[i] += OFFSET;
+        x2[i] += OFFSET;
     }
-
-    // 겹치는 선분의 최대값을 계산
-    int max_overlap = 0;
-    int current_overlap = 0;
-
-    // 배열을 전체적으로 순회하여 최대 겹침 구간을 찾음
-    for (int i = 0; i < 201; i++) {
-        current_overlap += arr[i];  // 현재 위치에서의 겹침을 누적
-        if (current_overlap > max_overlap) {
-            max_overlap = current_overlap;  // 최대 겹침 값 갱신
-        }
-    }
-
-    // 최대 겹침 값 출력
-    cout << max_overlap << endl;
-
+    
+    // 구간을 칠해줍니다.
+    // 구간 단위로 진행하는 문제이므로
+    // x2[i]에 등호가 들어가지 않음에 유의합니다.
+    for(int i = 0; i < n; i++)
+        for(int j = x1[i]; j < x2[i]; j++)
+            checked[j]++;
+    
+    // 최댓값을 구합니다.
+    int max = 0;
+    for(int i = 0; i <= MAX_R; i++)
+        if(checked[i] > max)
+            max = checked[i];
+    
+    cout << max;
     return 0;
 }

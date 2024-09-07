@@ -13,14 +13,14 @@ int main() {
     for(int i=0; i<n; i++){
         cin>>x>>dir;
         if(dir=='L'){
-            for(int j=cur; j>cur-x; j--){
+            for(int j=cur-1; j>=cur-x; j--){
                 arr[j]++;
             }
             cur -=x;
         }
 
         else{
-            for(int k=cur+1; k<cur+x; k++){
+            for(int k=cur+1; k<=cur+x; k++){
                 arr[k]++;
             }
             cur +=x;

@@ -7,9 +7,9 @@ int main() {
     cin>>n;
     int x;
     int a=0;
-    int cur =10000;
+    int cur =50000;
     char dir;
-    int arr[20000]={0};
+    int arr[100000]={0};
     for(int i=0; i<n; i++){
         cin>>x>>dir;
         if(dir=='L'){
@@ -28,7 +28,7 @@ int main() {
         
     }
     int max =0;
-    for(int i=0; i<=20000; i++){
+    for(int i=0; i<=100000; i++){
         if(arr[i]>1){
             max++;
         }

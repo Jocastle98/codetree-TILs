@@ -5,8 +5,8 @@ int main() {
     // 여기에 코드를 작성해주세요.
     int n;
     cin>>n;
-     
-    int arr[1000] = {0}; 
+    const int MAX = 10001;  
+    int arr[MAX] = {0}; 
 
     for(int i=0; i<n; i++){
         int a,b;

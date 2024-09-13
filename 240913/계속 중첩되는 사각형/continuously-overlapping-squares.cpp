@@ -17,10 +17,9 @@ int main() {
         int color = (i%2==0)?1:2;
         for(int x=x1[i];x<x2[i]; x++){
             for(int y=y1[i];y<y2[i];y++){
-               if (color == 2 || grid[x][y] == 0) {
-                    // 파란색이거나 아직 색상이 칠해지지 않은 경우만 갱신
+              
                     grid[x][y] = color;
-                }
+                
             
             }
         }

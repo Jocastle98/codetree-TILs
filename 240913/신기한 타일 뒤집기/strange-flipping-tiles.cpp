@@ -2,8 +2,8 @@
 using namespace std;
 
 
-#define max_x 2000
-#define off 1000
+#define max_x 20000
+#define off 10000
 
 int n;
 

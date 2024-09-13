@@ -14,7 +14,7 @@ int main() {
     // 여기에 코드를 작성해주세요.
     cin>>n;
 
-    int cur =1000;
+    int cur =off;
     int b=0,w=0;
     for(int i=0; i<n; i++){
         int dis;

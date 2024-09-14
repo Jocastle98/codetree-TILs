@@ -26,16 +26,27 @@ int main() {
         }
 
     }
-    int cnt =0,ans =0;
+    int cnt =0;
+    int pre =0; //이전 선두
     for(int i=1; i<timeA; i++){
-        if(i>=1 and curA[i]>curB[i]){
-            cnt++;
+        int curL; //A선두 1 B선두 2 동점 0
+        if(curA[i]>curB[i]){
+            curL =1;
+        }
+        else if(curA[i]<curB[i]){
+            curL =2;
         }
         else{
-            cnt =1;
+            curL =pre;
         }
-        ans = max(ans,cnt);
+    //이전 선두와 현재 선두가 다른 경우
+        if(i>1 && curL != pre){
+            if(curL !=0 && pre !=0){
+                cnt++;
+            }
+        }
+        pre = curL;
     }
-    cout<<ans;
+    cout<<cnt;
     return 0;
 }

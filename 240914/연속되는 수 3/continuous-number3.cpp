@@ -7,11 +7,11 @@ int main() {
     int n;
     cin>>n;
     int arr[1000];
-    int cnt=0;
+    int cnt=1;
     for(int i=0; i<n; i++){
         cin>>arr[i];
     }
-    int ans =0;
+    int ans =1;
 
     for(int i=1; i<n; i++){
         if((arr[i]<0 and arr[i-1]<0) or (arr[i]>0 and arr[i-1]>0) ){

@@ -28,7 +28,7 @@ int main() {
             }
         }
     }
-    for(int i=1; i<=N; i++){
+    for(int i=N; i>=1; i--){
         cout<<inf[i];
     }
     return 0;

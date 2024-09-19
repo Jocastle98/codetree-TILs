@@ -12,7 +12,8 @@ int main() {
 
     int dx[4] = {-1,0,1,0};//상우하좌
     int dy[4] = {0,1,0,-1};
-    int x,y,d; // r:행, c:열 , d :방향 
+    int x,y
+    char d; // r:행, c:열 , d :방향 
     cin>>x>>y>>d;
     int dir =0; //초기 방향
     if(d=='U'){

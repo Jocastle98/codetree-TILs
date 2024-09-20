@@ -16,7 +16,7 @@ int main() {
     for(int cnt=1; cnt<=n*m; cnt++){
         int nx = x+dx[dir];
         int ny = y+dy[dir];
-        arr[x][y] = char(64+cnt);
+        arr[x][y] = 'A' + (cnt - 1) % 26;
 
         if(InRange(nx,ny) and arr[nx][ny] ==0){
             x=nx;
@@ -27,9 +27,7 @@ int main() {
             x+=dx[dir];
             y+=dy[dir];
         }
-        if(arr[x][y]=='Z'){
-            cnt = 1;
-        }
+       
     }
     for(int i=0; i<n; i++){
         for(int j=0; j<m; j++){

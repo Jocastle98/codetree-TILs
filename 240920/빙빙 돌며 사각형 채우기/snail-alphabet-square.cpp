@@ -27,7 +27,7 @@ int main() {
             x+=dx[dir];
             y+=dy[dir];
         }
-        if(arr[x][y]>'Z'){
+        if(arr[x][y]=='Z'){
             cnt = 1;
         }
     }

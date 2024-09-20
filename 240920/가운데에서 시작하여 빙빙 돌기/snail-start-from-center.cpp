@@ -12,7 +12,7 @@ int main() {
     int dx[4] ={0,-1,0,1};//우상좌하
     int dy[4] ={1,0,-1,0};
     int dir =0;
-    int x= toupper(n/2), y=toupper(n/2);
+    int x= n/2, y=n/2;
     for(int cnt =1; cnt<=n*n; cnt++){
         int nx= x+dx[dir];
         int ny = y+dy[dir];

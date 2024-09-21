@@ -16,6 +16,9 @@ int main() {
         if(a[i]=='0'){
             b[i]='1';
         }
+        else{
+            b[i] = '0';
+        }
         
         int num =0;
         for(int i=0; i<(int)b.size(); i++){

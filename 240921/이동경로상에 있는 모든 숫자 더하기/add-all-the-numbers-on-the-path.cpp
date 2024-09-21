@@ -33,18 +33,13 @@ int main() {
         else if(command=='R'){
             dir = (dir+1)%4;
         }
-        
-        else if (command == 'F') {
-            // 현재 방향으로 한 칸 이동
-            int nx = x + dx[dir];
-            int ny = y + dy[dir];
-            
-            if (InRange(nx, ny)) {
-                // 이동 가능한 범위 내라면
-                x = nx;
-                y = ny;
-                sum += arr[x][y];  // 그 칸의 숫자를 더함
+        else{
+            if(InRange(x,y)){
+                sum+=arr[x][y];
+                x+=dx[dir];
+                y+=dy[dir];
             }
+            
         }
     }
     cout<<sum;

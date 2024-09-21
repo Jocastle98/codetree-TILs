@@ -1,32 +1,20 @@
 #include <iostream>
 using namespace std;
-
 int n;
-int arr[100][100];  // 격자 저장용 배열
-
-// 범위 내에 있는지 확인하는 함수
-bool InRange(int x, int y) {
-    return (0 <= x && x < n && 0 <= y && y < n);
+bool InRange(int x,int y){
+    return (0<=x and x<n and 0<=y and y<n);
 }
 
 int main() {
-    // 격자의 크기 입력
-    cin >> n;
-
-    // 방향: 오른쪽(0), 위쪽(1), 왼쪽(2), 아래쪽(3)
-    int dx[4] = {0, -1, 0, 1};  // 행 이동 (우, 상, 좌, 하)
-    int dy[4] = {1, 0, -1, 0};  // 열 이동 (우, 상, 좌, 하)
-    
-    int dir = 0;      // 초기 방향은 오른쪽
-    int x = n / 2;    // 시작 행 위치 (중앙)
-    int y = n / 2;    // 시작 열 위치 (중앙)
-    int steps = 1;    // 현재 이동할 칸의 수
-    int cnt = 1;      // 채울 숫자
-
-    arr[x][y] = cnt++;  // 시작 위치에 1을 채움
-
-    while (cnt <= n * n) {
-        // 두 번씩 반복해서 이동 (1번, 1번, 3번, 3번, 5번, 5번,...)
+    // 여기에 코드를 작성해주세요.
+    cin>>n;
+    int arr[100][100]={0};
+    int dx[4] ={0,-1,0,1};//우상좌하
+    int dy[4] ={1,0,-1,0};
+    int dir =0;
+    int x= n/2, y=n/2;
+     int steps = 1;
+    for(int cnt =1; cnt<=n*n; cnt++){
         for (int repeat = 0; repeat < 2; ++repeat) {
             // steps 만큼 이동
             for (int i = 0; i < steps; ++i) {
@@ -39,15 +27,13 @@ int main() {
             }
             dir = (dir + 1) % 4;  // 반시계 방향 회전
         }
-        steps += 2;  // 이동 횟수 2씩 증가
+        steps += 2;
     }
-
-    // 달팽이 모양으로 채워진 배열 출력
-    for (int i = 0; i < n; i++) {
-        for (int j = 0; j < n; j++) {
-            cout << arr[i][j] << " ";
+    for(int i=0; i<n; i++){
+        for(int j=0; j<n; j++){
+            cout<<arr[i][j]<<" ";
         }
-        cout << endl;
+        cout<<endl;
     }
 
     return 0;

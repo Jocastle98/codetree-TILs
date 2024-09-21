@@ -17,7 +17,7 @@ int main() {
     for(int i=1; i<x; i++){
         for(int j=1; j<y; j++){
             //처음 점프
-            if(arr[0][0] != arr[i][j]){
+            if(arr[0][0] != arr[i][j] and arr[0][0] != arr[x-1][y-1]){
                 for(int k=i+1; k<x; k++){
                     for(int l=j+1; l<y; l++){
                         //다음 점프

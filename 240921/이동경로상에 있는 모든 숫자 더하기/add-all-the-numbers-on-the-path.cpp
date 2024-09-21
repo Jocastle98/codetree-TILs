@@ -44,6 +44,7 @@ int main() {
                 y = ny;
                 sum += arr[x][y];  // 그 칸의 숫자를 더함
             }
+        }
     }
     cout<<sum;
     return 0;

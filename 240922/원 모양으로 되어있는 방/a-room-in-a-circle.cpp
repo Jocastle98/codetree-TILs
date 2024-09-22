@@ -18,8 +18,12 @@ int main() {
     for(int i=0; i<n; i++){
         int dis = 0;
         //이동거리 계산
+        //j는 이동할 집
         for(int j=0; j<n; j++){
-            dis +=arr[i]*abs(i-j);
+
+            if(j>=i)dis +=arr[j]*abs(i-j);//i번째 방 가야하는 사람 x i번째방과 j번째 방사이 거리
+            
+            else dis +=arr[j]*abs(n-j-1);
         }
         ans = min(ans,dis);
     }

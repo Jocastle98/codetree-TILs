@@ -8,7 +8,7 @@ int main() {
     // 여기에 코드를 작성해주세요.
     int n;
     cin>>n; //방 개수
-    int arr[101]={0}; //사람 수 
+    int arr[1003]={0}; //사람 수 
     for(int i=0; i<n; i++){
         cin>>arr[i];
     }

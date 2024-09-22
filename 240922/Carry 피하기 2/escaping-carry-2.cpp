@@ -4,12 +4,12 @@
 using namespace std;
 
 bool noCarry(int a, int b, int c) {
-    int carry = 0;
+    
     while (a > 0 || b > 0 || c > 0) {
-        int sum = a % 10 + b % 10 + c % 10 + carry;
+        int sum = a % 10 + b % 10 + c % 10 ;
         if (sum >= 10)
             return false;  // 자리 올림 발생
-        carry = 0;  // 자리 올림이 없으므로 carry를 0으로 유지
+        
         a /= 10;
         b /= 10;
         c /= 10;

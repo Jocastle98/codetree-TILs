@@ -16,9 +16,9 @@ int main() {
     for(int i=0; i<n; i++){
         int sum=0;
         //두번째 고르는 숫자 j
-        for(int j=i+1; j<n; j++){
+        for(int j=i+2; j<n; j++){
             
-            if(j != i+1)sum =arr[i]+arr[j];
+            sum =arr[i]+arr[j];
         }
         ans = max(sum,ans);
     }

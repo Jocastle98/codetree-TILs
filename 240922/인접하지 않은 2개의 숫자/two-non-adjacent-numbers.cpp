@@ -19,8 +19,10 @@ int main() {
         for(int j=i+2; j<n; j++){
             
             sum =arr[i]+arr[j];
+            ans = max(sum,ans);
         }
-        ans = max(sum,ans);
+        
+        
     }
     cout<<ans;
     return 0;

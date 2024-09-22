@@ -23,7 +23,7 @@ int main() {
 
             if(j>=i)dis +=arr[j]*abs(i-j);//i번째 방 가야하는 사람 x i번째방과 j번째 방사이 거리
             
-            else dis +=arr[j]*abs(n-j-1);
+            else dis +=arr[j]*abs(j-i+n);
         }
         ans = min(ans,dis);
     }

@@ -24,20 +24,24 @@ int main() {
             for(int k=0; k<5; k++){
                 for(int l=k+1; l<5; l++){
                     if(i==k or i==l or j==k or j==l) continue;
+                    
                     int sum1 = arr[i]+arr[j];
                     int sum2 = arr[k]+arr[l];
                     sum3 = total -sum1-sum2;
+                    if(sum1 ==sum2 or sum1 ==sum3 or sum2 ==sum3) continue;
                     if(sum1 !=sum2 and sum2 != sum3 and sum1 !=sum3){
                         int big = max(sum1,max(sum2,sum3));
                         int small =min(sum1,min(sum2,sum3));
                         dif = big-small;
                         ans = min(ans,dif);
                     }
+                    
+                    
                 }
             }
         }
     }
-    if(ans==0) cout<<-1;
+    if(ans ==0) cout<<-1;
     else cout<<ans;
     return 0;
 }

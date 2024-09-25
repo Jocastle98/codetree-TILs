@@ -12,9 +12,9 @@ int main() {
     //조합
     int cnt =0;
     //i = a j=b c=k
-    for(int i=1; i<=6; i++){
-        for(int j=1; j<=6; j++){
-            for(int k=1; k<=6; k++){
+    for(int i=1; i<=n; i++){
+        for(int j=1; j<=n; j++){
+            for(int k=1; k<=n; k++){
                 if(abs(a-i)>2 and abs(b-j)>2 and abs(c-k)>2){
                     cnt++;
                 }

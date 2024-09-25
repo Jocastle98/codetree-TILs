@@ -14,7 +14,7 @@ int main() {
         total +=arr[i];
         }
         
-    
+    bool found = false;
     int ans =INT_MAX;
 
     for(int i=0; i<5; i++){
@@ -28,12 +28,12 @@ int main() {
                     int sum1 = arr[i]+arr[j];
                     int sum2 = arr[k]+arr[l];
                     sum3 = total -sum1-sum2;
-                    if(sum1 ==sum2 or sum1 ==sum3 or sum2 ==sum3) continue;
                     if(sum1 !=sum2 and sum2 != sum3 and sum1 !=sum3){
                         int big = max(sum1,max(sum2,sum3));
                         int small =min(sum1,min(sum2,sum3));
                         dif = big-small;
                         ans = min(ans,dif);
+                        found = true;
                     }
                     
                     
@@ -41,7 +41,8 @@ int main() {
             }
         }
     }
-    if(ans ==0) cout<<-1;
-    else cout<<ans;
+    
+    if(found) cout<<ans;
+    else cout<<-1;
     return 0;
 }

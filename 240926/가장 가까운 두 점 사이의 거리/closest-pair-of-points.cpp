@@ -13,15 +13,18 @@ int main() {
         cin>>x[i]>>y[i];
     }
     int ans = INT_MAX;
+    //점 하나 선택
     for(int i=0; i<n; i++){
         int dis_x = INT_MAX;
         int dis_y = INT_MAX;
+        int dis=INT_MAX;
+        //점 두번째 선택 비교하기
         for(int j=i+1; j<n; j++){
             dis_x = min(dis_x,abs(x[i]-x[j]));
             dis_y = min(dis_y,abs(y[i]-y[j]));
-            ans = min(ans, dis_x*dis_x+dis_y*dis_y);
+            dis = min(dis, dis_x*dis_x+dis_y*dis_y);
         }
-        
+        ans = min(ans,dis);
     }
     cout<<ans;
     return 0;

@@ -1,38 +1,28 @@
 #include <iostream>
+#include <algorithm>  
+#include <cmath>
 #include <climits>
 using namespace std;
 
-struct Point {
-    int x;
-    int y;
-};
-
 int main() {
+    // 여기에 코드를 작성해주세요.
     int n;
-    cin >> n;
-    Point points[100]; // 최대 100개의 점을 저장할 배열
-
-    // 점의 좌표 입력
-    for(int i = 0; i < n; i++) {
-        cin >> points[i].x >> points[i].y;
+    cin>>n;
+    int x[100]={0}, y[100]={0};
+    for(int i=0; i<n; i++){
+        cin>>x[i]>>y[i];
     }
-
-    int min_distance_squared = INT_MAX; // 최소 거리의 제곱을 저장할 변수
-
-    // 모든 가능한 점 쌍을 비교
-    for(int i = 0; i < n; i++) {
-        for(int j = i + 1; j < n; j++) {
-            int dx = points[i].x - points[j].x;
-            int dy = points[i].y - points[j].y;
-            int distance_squared = dx * dx + dy * dy;
-
-            // 최소 거리의 제곱 갱신
-            if(distance_squared < min_distance_squared) {
-                min_distance_squared = distance_squared;
-            }
+    int ans = INT_MAX;
+    for(int i=0; i<n; i++){
+        int dis_x = INT_MAX;
+        int dis_y = INT_MAX;
+        for(int j=i+1; j<n; j++){
+            dis_x = x[i]-x[j];
+            dis_y = y[i]-y[j];
+            ans = min(ans,dis_x*dis_x+dis_y*dis_y);
         }
+        
     }
-
-    cout << min_distance_squared;
+    cout<<ans;
     return 0;
 }

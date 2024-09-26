@@ -19,8 +19,9 @@ int main() {
         for(int j=i+1; j<n; j++){
             dis_x = min(dis_x,abs(x[i]-x[j]));
             dis_y = min(dis_y,abs(y[i]-y[j]));
+            ans = min(ans, dis_x*dis_x+dis_y*dis_y);
         }
-        ans = min(ans, dis_x*dis_x+dis_y*dis_y);
+        
     }
     cout<<ans;
     return 0;

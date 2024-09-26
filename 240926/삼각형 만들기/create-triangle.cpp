@@ -21,17 +21,43 @@ int main() {
                 //i점과 j점은 x축에 평행 
                 if(y[i]==y[j]){ 
                     if(x[i]==x[k] or x[j]==x[k]){
-                        int height = abs(y[i]-y[k]); //높이
+                        int height;
+                        if(abs(y[k]-y[j])>abs(y[k]-y[i])){
+                            height = abs(y[k]-y[j]);
+                        }
+                        else{
+                            height = abs(y[i]-y[k]);
+                        }
                         int dis = abs(x[i]-x[j]); //밑변
                         ans = max(ans , height*dis);
 
                     }
                 }
-                //i점과 k점은 y축에 평행
-                if(x[i]==x[j]){
-                    if(y[k]==y[i] or y[k]==y[j]){
-                        int height = abs(y[i]-y[j]); //높이
-                        int dis = abs(x[k]-x[i]); //밑변
+                //i점과 k점은 x축에 평행
+                if(y[i]==y[j]){
+                    if(x[k]==x[i] or x[k]==x[j]){
+                        int height;
+                        if(abs(y[k]-y[j])>abs(y[i]-y[k])){
+                            height = abs(y[k]-y[j]);
+                        }
+                        else{
+                            height = abs(y[i]-y[k]);
+                        }
+                        int dis = abs(x[i]-x[j]); //밑변
+                        ans = max(ans , height*dis);
+                    }
+                }
+                //j와 k점은 x축 평행
+                if(y[j]==y[k]){
+                    if(x[i]==x[j] or x[i]==x[k]){
+                        int height;
+                        if(abs(y[i]-y[j])>abs(y[i]-y[k])){
+                            height = abs(y[i]-y[j]);
+                        }
+                        else{
+                            height = abs(y[i]-y[k]);
+                        }
+                        int dis = abs(x[i]-x[j]); //밑변
                         ans = max(ans , height*dis);
                     }
                 }

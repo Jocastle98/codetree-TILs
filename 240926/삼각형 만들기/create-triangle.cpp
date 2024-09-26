@@ -34,16 +34,16 @@ int main() {
                     }
                 }
                 //i점과 k점은 x축에 평행
-                if(y[i]==y[j]){
-                    if(x[k]==x[i] or x[k]==x[j]){
+                if(y[i]==y[k]){
+                    if(x[j]==x[i] or x[j]==x[k]){
                         int height;
-                        if(abs(y[k]-y[j])>abs(y[i]-y[k])){
+                        if(abs(y[k]-y[j])>abs(y[i]-y[j])){
                             height = abs(y[k]-y[j]);
                         }
                         else{
-                            height = abs(y[i]-y[k]);
+                            height = abs(y[i]-y[j]);
                         }
-                        int dis = abs(x[i]-x[j]); //밑변
+                        int dis = abs(x[i]-x[k]); //밑변
                         ans = max(ans , height*dis);
                     }
                 }

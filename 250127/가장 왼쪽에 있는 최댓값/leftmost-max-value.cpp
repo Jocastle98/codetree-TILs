@@ -15,12 +15,12 @@ int main() {
         v.push_back(a);
     }
 
-    int max_n = n; 
+    int max_n = n-1; 
     while (true) {
         int max_num = 0;
 
      
-        for (int i = 0; i < max_n; i++) {
+        for (int i = 0; i <= max_n; i++) {
             if (v[i] > v[max_num]) {
                 max_num = i;
             }

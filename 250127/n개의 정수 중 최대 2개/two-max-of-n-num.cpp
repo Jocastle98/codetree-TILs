@@ -3,22 +3,24 @@
 #include <algorithm>
 using namespace std;
 
-
-
 int main() {
-    // Write your code here!
     int n;
-    cin>>n;
-    vector<long long> v;
-    for(int i=0; i<n; i++){
+    cin >> n;
+
+   
+
+    vector<int> v;
+    for (int i = 0; i < n; i++) {
         int a;
-        cin>>a;
+        cin >> a;
         v.push_back(a);
     }
+
+    // 벡터 정렬
     sort(v.begin(), v.end());
-    for(int i =v.size()-1; i>=v.size()-2; i--){
-        cout<<v[i]<<" ";
-    }
+
+    // 상위 2개 요소 출력
+    cout << v[n - 1] << " " << v[n - 2] << endl;
 
     return 0;
 }

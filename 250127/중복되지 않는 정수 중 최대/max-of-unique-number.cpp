@@ -21,8 +21,8 @@ int main() {
     int max_num = -1;
     int cnt =0;
     for(int i=0; i<n; i++){
-        if(arr[i] ==1 && i>=max_num){
-            max_num = i;
+        if(arr[i] ==1 ){
+            max_num = max(i, max_num);
             cnt++;
         }
     }

@@ -9,7 +9,7 @@ int main() {
     // Write your code here!
     int n;
     cin>>n;
-    vector<int> v;
+    vector<long long> v;
     for(int i=0; i<n; i++){
         int a;
         cin>>a;
